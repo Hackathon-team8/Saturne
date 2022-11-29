@@ -30,3 +30,7 @@
 *.exe
 *.out
 *.app
+
+#build directory
+code_saturne-master.build
+saturne_build
