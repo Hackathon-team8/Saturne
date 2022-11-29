@@ -1,4 +1,5 @@
 code_saturne-master.build/*
+saturne-open-cases
 
 # Prerequisites
 *.d
