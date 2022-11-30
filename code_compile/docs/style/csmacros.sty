@@ -1,0 +1,149 @@
+%-------------------------------------------------------------------------------
+
+% This file is part of code_saturne, a general-purpose CFD tool.
+%
+% Copyright (C) 1998-2022 EDF S.A.
+%
+% This program is free software; you can redistribute it and/or modify it under
+% the terms of the GNU General Public License as published by the Free Software
+% Foundation; either version 2 of the License, or (at your option) any later
+% version.
+%
+% This program is distributed in the hope that it will be useful, but WITHOUT
+% ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+% FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
+% details.
+%
+% You should have received a copy of the GNU General Public License along with
+% this program; if not, write to the Free Software Foundation, Inc., 51 Franklin
+% Street, Fifth Floor, Boston, MA 02110-1301, USA.
+
+%-------------------------------------------------------------------------------
+
+% Name of classical tools of the code_saturne environment
+% (note that code_saturne itself is defined in csvers.tex)
+%
+\newcommand{\syrthes}{SYRTHES\xspace}
+%
+% VnV macros
+%
+\newcommand{\vnvitem}{\item[\hspace{1cm} -]}
+\newcommand{\vnvcase}[1][]{\item[#1]}
+%
+% Mathematical operators (and other useful related macros)
+%
+\newcommand{\dive}{\text{div}\,}
+\newcommand{\divs}{\text{div}\,}
+\newcommand{\divv}{\underline{\text{div}}\,}
+\newcommand{\divt}{\underline{\underline{\text{div}}}\,}
+\newcommand{\grad}{\underline{\nabla}}
+\newcommand{\ggrad}{\text{g}\underline{\underline{\text{rad}}}\,}
+\newcommand{\gradv}{\underline{\nabla}}
+\newcommand{\gradt}{\underline{\underline{\nabla}}}
+\newcommand{\gradtt}{\underline{\underline{\underline{\nabla}}}}
+\newcommand{\mat}[1]{\underline{\textrm{#1}}}
+\newcommand{\matt}[1]{\underline{\underline{\textrm{#1}}}}
+\newcommand{\rot}{\underline{\text{rot}}\ }
+\newcommand{\vect}[1]{\underline{#1}}
+\newcommand{\tens}[1]{\underline{\underline{#1}}}
+\newcommand{\transpose}[1]{#1^T}
+\newcommand{\symmetric}[1]{#1^S}
+\newcommand{\trace}{tr}
+\newcommand{\deviator}[1]{#1^D}
+\newcommand{\norm}[1]{\left| #1 \right|}
+\newcommand{\rans}[1]{{\overline{#1}}}
+\newcommand{\ints}[2]{{\overline{#1}_{#2}}}
+\newcommand{\fluct}[1]{{{#1}^\prime}}
+\newcommand{\favre}[1]{{\widetilde{#1}}}
+\newcommand{\intss}[2]{{\widetilde{#1}_{#2}}}
+\newcommand{\fluctt}[1]{{{#1}^{\prime \prime}}}
+\newcommand{\intt}[2]{{{#1}^{#2}}}
+
+%
+% Discretization
+%
+\newcommand{\Facei}[1]{\mathcal{F}^{int}_{#1}} % set of internal faces
+\newcommand{\Faceb}[1]{\mathcal{F}^{ext}_{#1}} %set of boundary faces
+\newcommand{\Face}[1]{\mathcal{F}_{#1}} % set of faces
+\newcommand{\face}{{f}} % face
+\newcommand{\fij}{{f_{ij}}} % internal face
+\newcommand{\fib}{{f_{b}}} % boundary face
+\newcommand{\iface}{{f_\celli}} % oriented face
+\renewcommand{\ij}{{ij}} % oriented internal face value ("K, sigma" in sushi)
+\newcommand{\ji}{{ji}} % oriented internal face value ("L, sigma" in sushi)
+\newcommand{\ib}{{ib}} % oriented internal face value ("K, sigma" in sushi)
+\newcommand{\celli}{i} % name of the current cell
+\newcommand{\centi}{I} % center of the current cell
+\newcommand{\centip}{{I^\prime}} % orthogonal center of the current cell
+\newcommand{\ipf}{{I^\prime}} % orthogonal center index of the current cell
+\newcommand{\vol}[1]{\Omega_{#1}} % Volume of the cell #1 (K itself in sushi)
+\newcommand{\cellj}{j} % name of the neighbouring face
+\newcommand{\centj}{J} % center of the neighbouring face
+\newcommand{\centjp}{{J^\prime}} % orthogonal center of the neighbouring cell
+\newcommand{\jpf}{{J^\prime}} % orthogonal center index of the neighbouring cell
+\newcommand{\centf}{F} % center of the face
+\newcommand{\cento}{O} % intersection between the cell centers and the face
+%
+\newcommand{\dd}{\mathrm{d}} % total derivative
+\newcommand{\der}[2]{\dfrac{\partial #1}{\partial #2}}
+\newcommand{\DP}[1]{\dfrac{\dd #1}{\dd t}} % lagrangian derivative
+%
+\newcommand{\varia}{Y} % variable name
+\newcommand{\variav}{\vect{v}} % vectorial variable name
+\newcommand{\variat}{\tens{t}} % vectorial variable name
+\newcommand{\ncell}{{N_{cell}}} % number of cells
+%
+\newcommand{\Neigh}[1]{Neigh\left(#1\right)}
+\newcommand{\Bound}[1]{Bound\left(#1\right)}
+%
+\newcommand{\doxygenfile}[2]{\href{run:./doxygen/src/#1}{#2}}
+%
+\newcommand{\doxygenanchor}[2]{\hyperlinkfileprefix{}\href{./doxygen/src/#1}{#2}\hyperlinkfileprefix{file:}}
+%
+\newcommand{\bm}[1]{\text{\boldmath $#1$ \unboldmath} \! \!}
+\newcommand{\comp}[1]{\textrm{#1}}
+\newcommand{\degresC}{$^\circ$C}
+% TODO remove
+\newcommand{\etape}[1]{\vspace{0.3cm}$\bullet\ ${\bf #1}\\}
+%
+\newcommand{\fort}[1]{\texttt{#1}}
+\newcommand{\code}[1]{\texttt{#1}}
+\newcommand{\ind}[1]{\text{$_{#1}$}}
+\newcommand{\Max}{\text{Max}}
+\newcommand{\Min}{\text{Min}}
+\newcommand{\nl}{\vspace{1ex}}
+% TODO remove
+\newcommand{\var}[1]{\ensuremath{\text{\texttt{#1}}}}
+%
+
+% Definition of variables and keywords (used in the different tables)
+%
+\newbox\tempbox
+\newcommand{\motcle}[7]{%
+   \noindent
+   \setbox\tempbox\hbox{\hspace*{2.5cm}}
+   \makebox[2.5cm][l]{\tt #1}\index{#1}\makebox[1.3cm][l]{#2}\makebox[6.cm][l]{#3}%
+   \makebox[4.cm][l]{[#4]}#5\hspace{1cm}#6\\
+   \hangindent\wd\tempbox\quad\ignorespaces#7\bigskip}
+\newcommand{\motcleb}[7]{%
+   \noindent
+   \setbox\tempbox\hbox{\hspace*{2.5cm}}
+   \makebox[2.5cm][l]{\tt \bf #1}\index{#1}\makebox[1.3cm][l]{#2}\makebox[6.cm][l]{#3}%
+   \makebox[4.cm][l]{[#4]}#5\hspace{1cm}#6\\
+   \hangindent\wd\tempbox\quad\ignorespaces#7\bigskip}
+%
+\newcommand{\variab}[4]{%
+       \setbox\tempbox\hbox{ifacel [e]: }
+       \hangindent\wd\tempbox\noindent{{\tt #2\index{#1}} [#3]:\quad}\ignorespaces#4.}
+\newcommand{\variabsize}[2]{%
+   \noindent
+   \makebox[.12\linewidth][l]{\tt #1:}\index{#1}\parbox[t]{.88\linewidth}{#2.}}
+\newcommand{\variablist}[4]{%
+       \setbox\tempbox\hbox{ifacel [e]: }
+       \hangindent\wd\tempbox\noindent{{\tt #2\index{#1}} [#3]:\quad}\ignorespaces#4\quad}
+\newcommand{\envvar}[1]{\medskip\noindent{\ttfamily \large #1}}
+%
+% Other useful macros (for \raggedright in tabular, for a Unix tilde)
+%
+\newcommand{\PreserveBackslash}[1]{\let\temp=\\#1\let\\=\temp}
+\newcommand{\tildeunix}{{\huge$_{_{\widetilde{\ }}}$}\hspace*{0.1mm}}

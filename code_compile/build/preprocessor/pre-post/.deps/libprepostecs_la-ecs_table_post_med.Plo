@@ -1,0 +1,5 @@
+libprepostecs_la-ecs_table_post_med.lo: \
+ ../../../preprocessor/pre-post/ecs_table_post_med.c \
+ /usr/include/stdc-predef.h ../../cs_config.h
+/usr/include/stdc-predef.h:
+../../cs_config.h:

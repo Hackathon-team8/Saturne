@@ -1,0 +1,190 @@
+libcsalge_la-cs_multigrid_smoother.lo: \
+ ../../../src/alge/cs_multigrid_smoother.c /usr/include/stdc-predef.h \
+ ../../../src/base/cs_defs.h ../../cs_config.h \
+ /opt/amazon/openmpi/include/mpi.h \
+ /opt/tools-hackathon/arm/compilers/gcc-11.2.0_Generic-AArch64_RHEL-7_aarch64-linux/lib/gcc/aarch64-linux-gnu/11.2.0/include/stddef.h \
+ /opt/amazon/openmpi/include/mpi_portable_platform.h \
+ /opt/tools-hackathon/arm/compilers/gcc-11.2.0_Generic-AArch64_RHEL-7_aarch64-linux/lib/gcc/aarch64-linux-gnu/11.2.0/include/omp.h \
+ /opt/tools-hackathon/arm/compilers/gcc-11.2.0_Generic-AArch64_RHEL-7_aarch64-linux/lib/gcc/aarch64-linux-gnu/11.2.0/include/stdint.h \
+ /usr/include/stdint.h /usr/include/bits/libc-header-start.h \
+ /usr/include/features.h /usr/include/sys/cdefs.h \
+ /usr/include/bits/wordsize.h /usr/include/bits/long-double.h \
+ /usr/include/gnu/stubs.h /usr/include/gnu/stubs-lp64.h \
+ /usr/include/bits/types.h /usr/include/bits/typesizes.h \
+ /usr/include/bits/wchar.h /usr/include/bits/stdint-intn.h \
+ /usr/include/bits/stdint-uintn.h /usr/include/sys/types.h \
+ /usr/include/bits/types/clock_t.h /usr/include/bits/types/clockid_t.h \
+ /usr/include/bits/types/time_t.h /usr/include/bits/types/timer_t.h \
+ /usr/include/bits/pthreadtypes.h /usr/include/bits/thread-shared-types.h \
+ /usr/include/bits/pthreadtypes-arch.h /usr/include/endian.h \
+ /usr/include/bits/endian.h \
+ /opt/tools-hackathon/arm/compilers/gcc-11.2.0_Generic-AArch64_RHEL-7_aarch64-linux/lib/gcc/aarch64-linux-gnu/11.2.0/include/stdbool.h \
+ /opt/tools-hackathon/arm/compilers/gcc-11.2.0_Generic-AArch64_RHEL-7_aarch64-linux/lib/gcc/aarch64-linux-gnu/11.2.0/include/stdarg.h \
+ /usr/include/stdio.h /usr/include/bits/types/__FILE.h \
+ /usr/include/bits/types/FILE.h /usr/include/libio.h \
+ /usr/include/_G_config.h /usr/include/bits/types/__mbstate_t.h \
+ /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
+ /usr/include/bits/stdio.h /usr/include/stdlib.h \
+ /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h \
+ /usr/include/bits/floatn.h /usr/include/bits/stdlib-bsearch.h \
+ /usr/include/bits/stdlib-float.h /usr/include/string.h \
+ /usr/include/bits/types/locale_t.h /usr/include/bits/types/__locale_t.h \
+ /usr/include/assert.h /usr/include/math.h \
+ /usr/include/bits/math-vector.h /usr/include/bits/libm-simd-decl-stubs.h \
+ /usr/include/bits/huge_val.h /usr/include/bits/huge_valf.h \
+ /usr/include/bits/huge_vall.h /usr/include/bits/inf.h \
+ /usr/include/bits/nan.h /usr/include/bits/flt-eval-method.h \
+ /usr/include/bits/fp-logb.h /usr/include/bits/fp-fast.h \
+ /usr/include/bits/mathcalls-helper-functions.h \
+ /usr/include/bits/mathcalls.h /usr/include/bits/mathinline.h \
+ ../../../src/alge/cs_sles_it.h ../../../src/base/cs_base.h \
+ ../../../src/base/cs_defs.h ../../../src/alge/cs_matrix.h \
+ ../../../src/base/cs_halo.h ../../../src/base/cs_base.h \
+ ../../../src/base/cs_base_accel.h ../../../src/bft/bft_mem.h \
+ ../../../src/bft/bft_error.h ../../../src/base/cs_interface.h \
+ ../../../src/fvm/fvm_defs.h ../../../src/fvm/fvm_periodicity.h \
+ ../../../src/fvm/fvm_defs.h ../../../src/base/cs_rank_neighbors.h \
+ ../../../src/base/cs_block_dist.h ../../../src/base/cs_numbering.h \
+ ../../../src/base/cs_log.h ../../../src/base/cs_timer.h \
+ ../../../src/alge/cs_matrix_assembler.h ../../../src/base/cs_log.h \
+ ../../../src/alge/cs_sles.h ../../../src/base/cs_halo_perio.h \
+ ../../../src/base/cs_halo.h ../../../src/alge/cs_sles_pc.h \
+ ../../../src/alge/cs_sles_it_priv.h ../../../src/bft/bft_error.h \
+ ../../../src/bft/bft_printf.h ../../../src/alge/cs_blas.h \
+ ../../../src/base/cs_file.h ../../../src/mesh/cs_mesh.h \
+ ../../../src/fvm/fvm_group.h ../../../src/fvm/fvm_selector.h \
+ ../../../src/fvm/fvm_group.h ../../../src/base/cs_interface.h \
+ ../../../src/base/cs_range_set.h ../../../src/base/cs_numbering.h \
+ ../../../src/mesh/cs_mesh_builder.h ../../../src/base/cs_block_dist.h \
+ ../../../src/mesh/cs_mesh_builder.h \
+ ../../../src/alge/cs_matrix_default.h ../../../src/base/cs_field.h \
+ ../../../src/alge/cs_matrix_util.h ../../../src/base/cs_post.h \
+ ../../../src/fvm/fvm_nodal.h ../../../src/fvm/fvm_io_num.h \
+ ../../../src/fvm/fvm_writer.h ../../../src/base/cs_timer.h \
+ ../../../src/fvm/fvm_nodal.h ../../../src/base/cs_interpolate.h \
+ ../../../src/mesh/cs_mesh_location.h ../../../src/mesh/cs_mesh.h \
+ ../../../src/base/cs_probe.h ../../../src/base/cs_time_step.h \
+ ../../../src/base/cs_time_control.h ../../../src/base/cs_time_plot.h \
+ ../../../src/alge/cs_multigrid_smoother.h
+/usr/include/stdc-predef.h:
+../../../src/base/cs_defs.h:
+../../cs_config.h:
+/opt/amazon/openmpi/include/mpi.h:
+/opt/tools-hackathon/arm/compilers/gcc-11.2.0_Generic-AArch64_RHEL-7_aarch64-linux/lib/gcc/aarch64-linux-gnu/11.2.0/include/stddef.h:
+/opt/amazon/openmpi/include/mpi_portable_platform.h:
+/opt/tools-hackathon/arm/compilers/gcc-11.2.0_Generic-AArch64_RHEL-7_aarch64-linux/lib/gcc/aarch64-linux-gnu/11.2.0/include/omp.h:
+/opt/tools-hackathon/arm/compilers/gcc-11.2.0_Generic-AArch64_RHEL-7_aarch64-linux/lib/gcc/aarch64-linux-gnu/11.2.0/include/stdint.h:
+/usr/include/stdint.h:
+/usr/include/bits/libc-header-start.h:
+/usr/include/features.h:
+/usr/include/sys/cdefs.h:
+/usr/include/bits/wordsize.h:
+/usr/include/bits/long-double.h:
+/usr/include/gnu/stubs.h:
+/usr/include/gnu/stubs-lp64.h:
+/usr/include/bits/types.h:
+/usr/include/bits/typesizes.h:
+/usr/include/bits/wchar.h:
+/usr/include/bits/stdint-intn.h:
+/usr/include/bits/stdint-uintn.h:
+/usr/include/sys/types.h:
+/usr/include/bits/types/clock_t.h:
+/usr/include/bits/types/clockid_t.h:
+/usr/include/bits/types/time_t.h:
+/usr/include/bits/types/timer_t.h:
+/usr/include/bits/pthreadtypes.h:
+/usr/include/bits/thread-shared-types.h:
+/usr/include/bits/pthreadtypes-arch.h:
+/usr/include/endian.h:
+/usr/include/bits/endian.h:
+/opt/tools-hackathon/arm/compilers/gcc-11.2.0_Generic-AArch64_RHEL-7_aarch64-linux/lib/gcc/aarch64-linux-gnu/11.2.0/include/stdbool.h:
+/opt/tools-hackathon/arm/compilers/gcc-11.2.0_Generic-AArch64_RHEL-7_aarch64-linux/lib/gcc/aarch64-linux-gnu/11.2.0/include/stdarg.h:
+/usr/include/stdio.h:
+/usr/include/bits/types/__FILE.h:
+/usr/include/bits/types/FILE.h:
+/usr/include/libio.h:
+/usr/include/_G_config.h:
+/usr/include/bits/types/__mbstate_t.h:
+/usr/include/bits/stdio_lim.h:
+/usr/include/bits/sys_errlist.h:
+/usr/include/bits/stdio.h:
+/usr/include/stdlib.h:
+/usr/include/bits/waitflags.h:
+/usr/include/bits/waitstatus.h:
+/usr/include/bits/floatn.h:
+/usr/include/bits/stdlib-bsearch.h:
+/usr/include/bits/stdlib-float.h:
+/usr/include/string.h:
+/usr/include/bits/types/locale_t.h:
+/usr/include/bits/types/__locale_t.h:
+/usr/include/assert.h:
+/usr/include/math.h:
+/usr/include/bits/math-vector.h:
+/usr/include/bits/libm-simd-decl-stubs.h:
+/usr/include/bits/huge_val.h:
+/usr/include/bits/huge_valf.h:
+/usr/include/bits/huge_vall.h:
+/usr/include/bits/inf.h:
+/usr/include/bits/nan.h:
+/usr/include/bits/flt-eval-method.h:
+/usr/include/bits/fp-logb.h:
+/usr/include/bits/fp-fast.h:
+/usr/include/bits/mathcalls-helper-functions.h:
+/usr/include/bits/mathcalls.h:
+/usr/include/bits/mathinline.h:
+../../../src/alge/cs_sles_it.h:
+../../../src/base/cs_base.h:
+../../../src/base/cs_defs.h:
+../../../src/alge/cs_matrix.h:
+../../../src/base/cs_halo.h:
+../../../src/base/cs_base.h:
+../../../src/base/cs_base_accel.h:
+../../../src/bft/bft_mem.h:
+../../../src/bft/bft_error.h:
+../../../src/base/cs_interface.h:
+../../../src/fvm/fvm_defs.h:
+../../../src/fvm/fvm_periodicity.h:
+../../../src/fvm/fvm_defs.h:
+../../../src/base/cs_rank_neighbors.h:
+../../../src/base/cs_block_dist.h:
+../../../src/base/cs_numbering.h:
+../../../src/base/cs_log.h:
+../../../src/base/cs_timer.h:
+../../../src/alge/cs_matrix_assembler.h:
+../../../src/base/cs_log.h:
+../../../src/alge/cs_sles.h:
+../../../src/base/cs_halo_perio.h:
+../../../src/base/cs_halo.h:
+../../../src/alge/cs_sles_pc.h:
+../../../src/alge/cs_sles_it_priv.h:
+../../../src/bft/bft_error.h:
+../../../src/bft/bft_printf.h:
+../../../src/alge/cs_blas.h:
+../../../src/base/cs_file.h:
+../../../src/mesh/cs_mesh.h:
+../../../src/fvm/fvm_group.h:
+../../../src/fvm/fvm_selector.h:
+../../../src/fvm/fvm_group.h:
+../../../src/base/cs_interface.h:
+../../../src/base/cs_range_set.h:
+../../../src/base/cs_numbering.h:
+../../../src/mesh/cs_mesh_builder.h:
+../../../src/base/cs_block_dist.h:
+../../../src/mesh/cs_mesh_builder.h:
+../../../src/alge/cs_matrix_default.h:
+../../../src/base/cs_field.h:
+../../../src/alge/cs_matrix_util.h:
+../../../src/base/cs_post.h:
+../../../src/fvm/fvm_nodal.h:
+../../../src/fvm/fvm_io_num.h:
+../../../src/fvm/fvm_writer.h:
+../../../src/base/cs_timer.h:
+../../../src/fvm/fvm_nodal.h:
+../../../src/base/cs_interpolate.h:
+../../../src/mesh/cs_mesh_location.h:
+../../../src/mesh/cs_mesh.h:
+../../../src/base/cs_probe.h:
+../../../src/base/cs_time_step.h:
+../../../src/base/cs_time_control.h:
+../../../src/base/cs_time_plot.h:
+../../../src/alge/cs_multigrid_smoother.h:
