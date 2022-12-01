@@ -175,6 +175,52 @@ if test "x$with_blas" != "xno" ; then
 
   fi
 
+  # Test for ARMPL BLAS
+
+  if test "x$with_blas_type" = "x" -o "x$with_blas_type" = "xARMPL" ; then
+
+    if test "$1" = "yes" -o "x$with_blas_libs" = "x"; then # Threaded version ?
+
+      BLAS_LIBS="-cblas -armpl -lpthread"
+
+      CPPFLAGS="${saved_CPPFLAGS} ${BLAS_CPPFLAGS}"
+      LDFLAGS="${saved_LDFLAGS} ${BLAS_LDFLAGS}"
+      LIBS=" ${BLAS_LIBS} ${saved_LIBS}"
+
+      AC_MSG_CHECKING([for threaded ARMPL BLAS])
+      AC_LINK_IFELSE([AC_LANG_PROGRAM([[#include <cblas.h>]],
+                     [[ cblas_ddot(0, 0, 0, 0, 0); ]])],
+                     [ AC_DEFINE([HAVE_ARMPL], 1, [ARMPL BLAS support])
+                       cs_have_blas=yes; with_blas_type=ARMPL ],
+                     [cs_have_blas=no])
+      AC_MSG_RESULT($cs_have_blas)
+    fi
+
+    if test "$cs_have_blas" = "no" ; then # Test for non-threaded version
+                                          # or explicitely specified libs second
+      if test "x$with_blas_libs" != "x" -a "x$with_blas_type" = "xARMPL"; then
+        BLAS_LIBS="$with_blas_libs"
+      else
+        BLAS_LIBS="-lcblas -armpl"
+      fi
+
+      CPPFLAGS="${saved_CPPFLAGS} ${BLAS_CPPFLAGS}"
+      LDFLAGS="${saved_LDFLAGS} ${BLAS_LDFLAGS}"
+      LIBS=" ${BLAS_LIBS} ${saved_LIBS}"
+
+      AC_MSG_CHECKING([for ARMPL BLAS])
+      AC_LINK_IFELSE([AC_LANG_PROGRAM([[#include <cblas.h>]],
+                     [[ cblas_ddot(0, 0, 0, 0, 0); ]])],
+                     [ AC_DEFINE([HAVE_ARMPL], 1, [ARMPL BLAS support])
+                       cs_have_blas=yes; with_blas_type=ARMPL ],
+                     [cs_have_blas=no])
+      AC_MSG_RESULT($cs_have_blas)
+    fi
+
+  fi
+
+
+
   # Test for ATLAS BLAS
 
   if test "x$with_blas_type" = "x" -o "x$with_blas_type" = "xATLAS" ; then
