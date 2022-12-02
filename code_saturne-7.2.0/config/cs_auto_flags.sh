@@ -382,7 +382,6 @@ if test "x$cs_cc_compiler_known" != "xyes" ; then
     # Version strings for logging purposes and known compiler flag
     cs_ac_cc_version=`$CC -v 2>&1 | grep "Arm C/C++/Fortran" | head -1`
     cs_cc_compiler_known=yes
-    cs_linker_set=yes
 
     # Default compiler flags
     cflags_default="-std=c11 -fPIC"
