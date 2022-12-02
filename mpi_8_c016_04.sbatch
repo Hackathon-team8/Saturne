@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+#SBATCH --nodes=1 --ntasks=8
+#SBATCH -o C016_04_8MPI.%J.out
+#SBATCH --exclusive
+#SBATCH -p basic-slurm
+
+export OMP_NUM_THREADS=1
+export OMP_PROC_BIND=TRUE
+/usr/bin/time code_saturne run
