@@ -796,11 +796,9 @@ elif test "x$cs_gxx" = "xclang"; then
   cxxflags_default_omp="-fopenmp=libomp"
   cxxflags_default_std="-funsigned-char"
 
-
 # Otherwise, are we using the Arm compiler ?
 #------------------------------------------
-
-if test "x$cs_cxx_compiler_known" != "xyes" ; then
+elif test "x$cs_cxx_compiler_known" != "xyes"; then
 
   $CXX -v 2>&1 | grep 'Arm C/C++/Fortran' > /dev/null
   if test "$?" = "0" ; then
@@ -819,14 +817,11 @@ if test "x$cs_cxx_compiler_known" != "xyes" ; then
     cfxxlags_default_omp="-fopenmp"
     cxxflags_default_std=""
   fi
-fi
-
-
 
 # Otherwise, are we using pgc++/nvc++ ?
 #--------------------------------------
 
-else
+elif test "x$cs_gxx" = "xno"; then
 
   $CXX -V 2>&1 | grep 'NVIDIA' > /dev/null
   if test "$?" = "0" ; then
@@ -981,7 +976,7 @@ fcflags_default_prf="-g"
 
 cs_gfortran=no
 
-cs_ac_fc_version=`$FC $user_FCFLAGS --version 2>&1 | head -1`
+cs_ac_fc_version=`$FC $user_FCFLAGS --version 1>&1 | head -1`
 
 # Are we using gfortran ?
 #------------------------
