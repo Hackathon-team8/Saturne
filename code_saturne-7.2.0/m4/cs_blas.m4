@@ -181,7 +181,7 @@ if test "x$with_blas" != "xno" ; then
 
     if test "$1" = "yes" -o "x$with_blas_libs" = "x"; then # Threaded version ?
 
-      BLAS_LIBS="-cblas -armpl -lpthread"
+      BLAS_LIBS="-larmpl -lpthread"
 
       CPPFLAGS="${saved_CPPFLAGS} ${BLAS_CPPFLAGS}"
       LDFLAGS="${saved_LDFLAGS} ${BLAS_LDFLAGS}"
@@ -201,7 +201,7 @@ if test "x$with_blas" != "xno" ; then
       if test "x$with_blas_libs" != "x" -a "x$with_blas_type" = "xARMPL"; then
         BLAS_LIBS="$with_blas_libs"
       else
-        BLAS_LIBS="-lcblas -armpl"
+        BLAS_LIBS="-larmpl"
       fi
 
       CPPFLAGS="${saved_CPPFLAGS} ${BLAS_CPPFLAGS}"
