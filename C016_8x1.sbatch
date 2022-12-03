@@ -8,5 +8,5 @@
 #SBATCH -p slurm-a
 
 export OMP_NUM_THREADS=1
-export OMP_PROC_BIND=TRUE
+export OMP_PROC_BIND=CLOSE
 /usr/bin/time ~/code_saturne/bin/code_saturne run
