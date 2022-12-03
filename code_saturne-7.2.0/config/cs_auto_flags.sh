@@ -420,7 +420,7 @@ if test "x$cs_cc_compiler_known" != "xyes" ; then
     cs_cc_compiler_known=yes
 
     # Default compiler flags
-    cflags_default=""
+    cflags_default="-fPIC"
     cflags_default_dbg="-g -Mbounds"
     cflags_default_opt="-O2"
     cflags_default_hot="-fast"
@@ -796,11 +796,9 @@ elif test "x$cs_gxx" = "xclang"; then
   cxxflags_default_omp="-fopenmp=libomp"
   cxxflags_default_std="-funsigned-char"
 
-
 # Otherwise, are we using the Arm compiler ?
 #------------------------------------------
-
-if test "x$cs_cxx_compiler_known" != "xyes" ; then
+elif test "x$cs_cxx_compiler_known" != "xyes"; then
 
   $CXX -v 2>&1 | grep 'Arm C/C++/Fortran' > /dev/null
   if test "$?" = "0" ; then
@@ -820,20 +818,14 @@ if test "x$cs_cxx_compiler_known" != "xyes" ; then
     cxxflags_default_std=""
   fi
 fi
-
-
-
 # Otherwise, are we using pgc++/nvc++ ?
 #--------------------------------------
-
-else
-
-  $CXX -V 2>&1 | grep 'NVIDIA' > /dev/null
+if test "x$cs_cxx_compiler_known" != "xyes"; then
+    $CXX -V 2>&1 | grep 'NVIDIA' > /dev/null
   if test "$?" = "0" ; then
     $CXX -V 2>&1 | grep 'Compilers and Tools' > /dev/null
   fi
   if test "$?" = "0" ; then
-
     echo "compiler '$CXX' is NVIDIA compiler"
 
     # Version strings for logging purposes and known compiler flag
@@ -845,7 +837,7 @@ else
     cs_cxx_compiler_known=yes
 
     # Default compiler flags
-    cxxflags_default=""
+    cxxflags_default="-fPIC"
     cxxflags_default_dbg="-g -Mbounds"
     cxxflags_default_opt="-O2"
     cxxflags_default_hot="-fast"
@@ -853,8 +845,8 @@ else
     cxxflags_default_std=""
 
   fi
-
 fi
+
 
 # Otherwise, are we using xlc++ ?
 #--------------------------------
@@ -981,7 +973,7 @@ fcflags_default_prf="-g"
 
 cs_gfortran=no
 
-cs_ac_fc_version=`$FC $user_FCFLAGS --version 2>&1 | head -1`
+cs_ac_fc_version=`$FC $user_FCFLAGS --version 1>&1 | head -1`
 
 # Are we using gfortran ?
 #------------------------
@@ -989,7 +981,6 @@ cs_ac_fc_version=`$FC $user_FCFLAGS --version 2>&1 | head -1`
 echo $cs_ac_fc_version | grep 'GNU Fortran' > /dev/null
 
 if test "$?" = "0" ; then
-
   cs_fc_version=`echo $FC --version  |sed 's/[a-zA-Z()]//g'`
   cs_fc_version="`$FC -v 2>&1 |grep 'gcc version' |\
                   sed 's/.*gcc version \([-a-z0-9\.]*\).*/\1/'`"
@@ -1171,7 +1162,7 @@ if test "x$cs_fc_compiler_known" != "xyes" ; then
     cs_fc_compiler_known=yes
 
     # Default compiler flags
-    fcflags_default="-Mpreprocess -noswitcherror"
+    fcflags_default="-Mpreprocess -noswitcherror -fPIC"
     fcflags_default_dbg="-g -Mbounds"
     fcflags_default_opt="-O2"
     fcflags_default_hot="-fast"

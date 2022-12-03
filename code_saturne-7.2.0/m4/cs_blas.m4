@@ -219,8 +219,6 @@ if test "x$with_blas" != "xno" ; then
 
   fi
 
-
-
   # Test for ATLAS BLAS
 
   if test "x$with_blas_type" = "x" -o "x$with_blas_type" = "xATLAS" ; then
