@@ -462,18 +462,6 @@ cs_have_openmp=no
 cs_have_openmp_target=no
 cs_have_openmp_f=no
 
-AC_ARG_ENABLE(openmp,
-  [AS_HELP_STRING([--disable-openmp], [disable OpenMP support])],
-  [
-    case "${enableval}" in
-      yes) cs_have_openmp=yes ;;
-      no)  cs_have_openmp=no ;;
-      *)   AC_MSG_ERROR([bad value ${enableval} for --enable-openmp]) ;;
-    esac
-  ],
-  [ cs_have_openmp=yes ]
-)
-
 AC_ARG_ENABLE(openmp_target,
   [AS_HELP_STRING([--enable-openmp-target], [enable OpenMP accelerator support])],
   [
@@ -485,6 +473,18 @@ AC_ARG_ENABLE(openmp_target,
     esac
   ],
   [ cs_have_openmp=no ]
+)
+
+AC_ARG_ENABLE(openmp,
+  [AS_HELP_STRING([--disable-openmp], [disable OpenMP support])],
+  [
+    case "${enableval}" in
+      yes) cs_have_openmp=yes ;;
+      no)  cs_have_openmp=no ;;
+      *)   AC_MSG_ERROR([bad value ${enableval} for --enable-openmp]) ;;
+    esac
+  ],
+  [ cs_have_openmp=yes ]
 )
 
 if test "x$cs_have_openmp_target" = "xyes" ; then
