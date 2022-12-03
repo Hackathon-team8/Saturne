@@ -9,5 +9,5 @@
 
 export OMP_NUM_THREADS=1
 export OMP_PROC_BIND=TRUE
-/usr/bin/time ~/code_saturne/bin/code_saturne run
+/usr/bin/time ~/code_saturne-7.2.0/bin/code_saturne run
 
