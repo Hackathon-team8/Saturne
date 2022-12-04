@@ -20,4 +20,5 @@ make install
 sbatch run_saturn.sbatch
 ```
 
-## You may have to change the file run_saturn.sbatch to run it on a node
+Depending on which cluster the program is being submitted to, it may be necessary to change the partition's name as it is a placeholder  
+And please be aware that the full path to the Saturn binary compiled and installed is necessary to launch the job successfully
