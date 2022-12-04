@@ -1,5 +1,0 @@
-4 core per node: images/Number_of_core.png
-SVE activated: images/SVE.png
-OS version: images/Linux_Version.png
-
-
