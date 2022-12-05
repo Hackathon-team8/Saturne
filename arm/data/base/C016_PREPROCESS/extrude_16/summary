@@ -1,0 +1,98 @@
+========================================================
+Start time       : Sunday December 04 18:39:14 CEST 2022
+========================================================
+  Command        : /userdir/home/skone/arm/bin/code_saturne run
+========================================================
+  Package path   : /userdir/home/skone/code_saturne-7.2.0
+  ----------------------------------------------------
+  MPI path       : 
+  MPI type       : OpenMPI
+  ----------------------------------------------------
+  User           : skone
+  ----------------------------------------------------
+  Machine        : Linux ip-10-8-15-90 5.10.149-133.644.amzn2.aarch64 #1 SMP Tue Oct 18 16:52:38 UTC 2022 aarch64 aarch64 
+  N Procs        : 1
+  ----------------------------------------------------
+  Environment variables
+    ARMPLROOT=/opt/tools-hackathon/arm/compilers/armpl-22.1.0_AArch64_RHEL-7_arm-linux-compiler_aarch64-linux/include
+    ARMPL_BUILD=588:10
+    ARMPL_DIR=/opt/arm/armpl/21.0.0/armpl_21.0_gcc-9.3:/opt/tools-hackathon/arm/compilers/armpl-22.1.0_AArch64_RHEL-7_arm-linux-compiler_aarch64-linux
+    ARMPL_INCLUDES=/opt/arm/armpl/21.0.0/armpl_21.0_gcc-9.3/include:/opt/tools-hackathon/arm/compilers/armpl-22.1.0_AArch64_RHEL-7_arm-linux-compiler_aarch64-linux/include
+    ARMPL_INCLUDES_ILP64=/opt/arm/armpl/21.0.0/armpl_21.0_gcc-9.3/include_ilp64:/opt/tools-hackathon/arm/compilers/armpl-22.1.0_AArch64_RHEL-7_arm-linux-compiler_aarch64-linux/include_ilp64
+    ARMPL_INCLUDES_ILP64_MP=/opt/arm/armpl/21.0.0/armpl_21.0_gcc-9.3/include_ilp64_mp:/opt/tools-hackathon/arm/compilers/armpl-22.1.0_AArch64_RHEL-7_arm-linux-compiler_aarch64-linux/include_ilp64_mp
+    ARMPL_INCLUDES_INT64=/opt/arm/armpl/21.0.0/armpl_21.0_gcc-9.3/include_ilp64:/opt/tools-hackathon/arm/compilers/armpl-22.1.0_AArch64_RHEL-7_arm-linux-compiler_aarch64-linux/include_ilp64
+    ARMPL_INCLUDES_INT64_MP=/opt/arm/armpl/21.0.0/armpl_21.0_gcc-9.3/include_ilp64_mp:/opt/tools-hackathon/arm/compilers/armpl-22.1.0_AArch64_RHEL-7_arm-linux-compiler_aarch64-linux/include_ilp64_mp
+    ARMPL_INCLUDES_LP64_MP=/opt/arm/armpl/21.0.0/armpl_21.0_gcc-9.3/include_lp64_mp:/opt/tools-hackathon/arm/compilers/armpl-22.1.0_AArch64_RHEL-7_arm-linux-compiler_aarch64-linux/include_lp64_mp
+    ARMPL_INCLUDES_MP=/opt/arm/armpl/21.0.0/armpl_21.0_gcc-9.3/include_lp64_mp:/opt/tools-hackathon/arm/compilers/armpl-22.1.0_AArch64_RHEL-7_arm-linux-compiler_aarch64-linux/include_lp64_mp
+    ARMPL_LIBRARIES=/opt/tools-hackathon/arm/compilers/armpl-22.1.0_AArch64_RHEL-7_arm-linux-compiler_aarch64-linux/lib
+    ARM_LICENSE_DIR=/opt/arm/armpl/21.0.0/arm-performance-libraries_21.0_gcc-9.3/license_terms:/opt/tools-hackathon/arm/compilers/licences:/opt/tools-hackathon/arm/compilers/licenses
+    ARM_LINUX_COMPILER_BUILD=12
+    ARM_LINUX_COMPILER_DIR=/opt/tools-hackathon/arm/compilers/arm-linux-compiler-22.1_Generic-AArch64_RHEL-7_aarch64-linux
+    ARM_LINUX_COMPILER_INCLUDES=/opt/tools-hackathon/arm/compilers/arm-linux-compiler-22.1_Generic-AArch64_RHEL-7_aarch64-linux/includes
+    ARM_LINUX_COMPILER_LIBRARIES=/opt/tools-hackathon/arm/compilers/arm-linux-compiler-22.1_Generic-AArch64_RHEL-7_aarch64-linux/lib
+    BASH_FUNC_module()=() {  eval `/usr/bin/modulecmd bash $*`
+}
+    BLAS=/opt/arm/armpl/21.0.0/armpl_21.0_gcc-9.3/lib/libarmpl_lp64.a:/opt/tools-hackathon/arm/compilers/armpl-22.1.0_AArch64_RHEL-7_arm-linux-compiler_aarch64-linux/lib/libarmpl_lp64.a
+    BLAS_SHARED=/opt/arm/armpl/21.0.0/armpl_21.0_gcc-9.3/lib/libarmpl_lp64.so:/opt/tools-hackathon/arm/compilers/armpl-22.1.0_AArch64_RHEL-7_arm-linux-compiler_aarch64-linux/lib/libarmpl_lp64.so
+    BLAS_STATIC=/opt/arm/armpl/21.0.0/armpl_21.0_gcc-9.3/lib/libarmpl_lp64.a:/opt/tools-hackathon/arm/compilers/armpl-22.1.0_AArch64_RHEL-7_arm-linux-compiler_aarch64-linux/lib/libarmpl_lp64.a
+    CC=mpicc
+    COMPILER_PATH=/opt/tools-hackathon/arm/compilers/gcc-11.2.0_Generic-AArch64_RHEL-7_aarch64-linux
+    CPATH=/opt/tools-hackathon/arm/compilers/armpl-22.1.0_AArch64_RHEL-7_arm-linux-compiler_aarch64-linux/include_common:/opt/tools-hackathon/openmpi/acfl/include:/opt/tools-hackathon/arm/compilers/arm-linux-compiler-22.1_Generic-AArch64_RHEL-7_aarch64-linux/include:/opt/tools-hackathon/arm/compilers/gcc-11.2.0_Generic-AArch64_RHEL-7_aarch64-linux/include:/opt/arm/armpl/21.0.0/armpl_21.0_gcc-9.3/include_common
+    CS=/userdir/home/skone/arm/bin/code_saturne
+    CS_NOMP=/userdir/home/skone/arm/bin/code_saturne_no_openmp
+    CXX=mpic++
+    DATAROOT=/userdir/home/skone/saturne-open-cases/BUNDLE
+    DEST=/userdir/home/skone/arm
+    FC=gfortran
+    GCC_BUILD=223
+    GCC_DIR=/opt/tools-hackathon/arm/compilers/gcc-11.2.0_Generic-AArch64_RHEL-7_aarch64-linux
+    GCC_INCLUDES=/opt/tools-hackathon/arm/compilers/gcc-11.2.0_Generic-AArch64_RHEL-7_aarch64-linux/include
+    GCC_LIBRARIES=/opt/tools-hackathon/arm/compilers/gcc-11.2.0_Generic-AArch64_RHEL-7_aarch64-linux/lib:/opt/tools-hackathon/arm/compilers/gcc-11.2.0_Generic-AArch64_RHEL-7_aarch64-linux/lib64
+    HISTCONTROL=ignoredups
+    HISTSIZE=1000
+    HOME=/userdir/home/skone
+    HOSTNAME=ip-10-8-15-90
+    INCLUDE=/opt/arm/armpl/gcc/9.3.0/include
+    LANG=fr_FR.UTF-8
+    LAPACK=/opt/arm/armpl/21.0.0/armpl_21.0_gcc-9.3/lib/libarmpl_lp64.a:/opt/tools-hackathon/arm/compilers/armpl-22.1.0_AArch64_RHEL-7_arm-linux-compiler_aarch64-linux/lib/libarmpl_lp64.a
+    LAPACK_SHARED=/opt/arm/armpl/21.0.0/armpl_21.0_gcc-9.3/lib/libarmpl_lp64.so:/opt/tools-hackathon/arm/compilers/armpl-22.1.0_AArch64_RHEL-7_arm-linux-compiler_aarch64-linux/lib/libarmpl_lp64.so
+    LAPACK_STATIC=/opt/arm/armpl/21.0.0/armpl_21.0_gcc-9.3/lib/libarmpl_lp64.a:/opt/tools-hackathon/arm/compilers/armpl-22.1.0_AArch64_RHEL-7_arm-linux-compiler_aarch64-linux/lib/libarmpl_lp64.a
+    LD_LIBRARY_PATH=/opt/tools-hackathon/arm/compilers/armpl-22.1.0_AArch64_RHEL-7_arm-linux-compiler_aarch64-linux/lib:/opt/tools-hackathon/openmpi/acfl/lib:/opt/tools-hackathon/arm/compilers/arm-linux-compiler-22.1_Generic-AArch64_RHEL-7_aarch64-linux/lib:/opt/tools-hackathon/arm/compilers/gcc-11.2.0_Generic-AArch64_RHEL-7_aarch64-linux/lib64:/opt/tools-hackathon/arm/compilers/gcc-11.2.0_Generic-AArch64_RHEL-7_aarch64-linux/lib:/opt/arm/armpl/21.0.0/armpl_21.0_gcc-9.3/lib:/opt/arm/armpl/gcc/9.3.0/lib64:/opt/arm/armpl/gcc/9.3.0/lib:/opt/tools-hackathon/arm/compilers/arm-linux-compiler-22.1_Generic-AArch64_RHEL-7_aarch64-linux/lib/clang/13.0.1/armpl_links/lib
+    LESSOPEN=||/usr/bin/lesspipe.sh %s
+    LIBRARY_PATH=/opt/tools-hackathon/arm/compilers/armpl-22.1.0_AArch64_RHEL-7_arm-linux-compiler_aarch64-linux/lib:/opt/tools-hackathon/openmpi/acfl/lib:/opt/tools-hackathon/arm/compilers/arm-linux-compiler-22.1_Generic-AArch64_RHEL-7_aarch64-linux/lib:/opt/tools-hackathon/arm/compilers/gcc-11.2.0_Generic-AArch64_RHEL-7_aarch64-linux/lib64:/opt/tools-hackathon/arm/compilers/gcc-11.2.0_Generic-AArch64_RHEL-7_aarch64-linux/lib:/opt/arm/armpl/21.0.0/armpl_21.0_gcc-9.3/lib
+    LOADEDMODULES=arm-forge/22.1:gcc-9.3:21.0.0_gcc-9.3:armpl/21.0.0:binutils/11.2.0:acfl/22.1:openmpi/acfl/4.1.4:armpl/22.1.0
+    LOGNAME=skone
+    LS_COLORS=rs=0:di=38;5;27:ln=38;5;51:mh=44;38;5;15:pi=40;38;5;11:so=38;5;13:do=38;5;5:bd=48;5;232;38;5;11:cd=48;5;232;38;5;3:or=48;5;232;38;5;9:mi=05;48;5;232;38;5;15:su=48;5;196;38;5;15:sg=48;5;11;38;5;16:ca=48;5;196;38;5;226:tw=48;5;10;38;5;16:ow=48;5;10;38;5;21:st=48;5;21;38;5;15:ex=38;5;34:*.tar=38;5;9:*.tgz=38;5;9:*.arc=38;5;9:*.arj=38;5;9:*.taz=38;5;9:*.lha=38;5;9:*.lz4=38;5;9:*.lzh=38;5;9:*.lzma=38;5;9:*.tlz=38;5;9:*.txz=38;5;9:*.tzo=38;5;9:*.t7z=38;5;9:*.zip=38;5;9:*.z=38;5;9:*.Z=38;5;9:*.dz=38;5;9:*.gz=38;5;9:*.lrz=38;5;9:*.lz=38;5;9:*.lzo=38;5;9:*.xz=38;5;9:*.bz2=38;5;9:*.bz=38;5;9:*.tbz=38;5;9:*.tbz2=38;5;9:*.tz=38;5;9:*.deb=38;5;9:*.rpm=38;5;9:*.jar=38;5;9:*.war=38;5;9:*.ear=38;5;9:*.sar=38;5;9:*.rar=38;5;9:*.alz=38;5;9:*.ace=38;5;9:*.zoo=38;5;9:*.cpio=38;5;9:*.7z=38;5;9:*.rz=38;5;9:*.cab=38;5;9:*.jpg=38;5;13:*.jpeg=38;5;13:*.gif=38;5;13:*.bmp=38;5;13:*.pbm=38;5;13:*.pgm=38;5;13:*.ppm=38;5;13:*.tga=38;5;13:*.xbm=38;5;13:*.xpm=38;5;13:*.tif=38;5;13:*.tiff=38;5;13:*.png=38;5;13:*.svg=38;5;13:*.svgz=38;5;13:*.mng=38;5;13:*.pcx=38;5;13:*.mov=38;5;13:*.mpg=38;5;13:*.mpeg=38;5;13:*.m2v=38;5;13:*.mkv=38;5;13:*.webm=38;5;13:*.ogm=38;5;13:*.mp4=38;5;13:*.m4v=38;5;13:*.mp4v=38;5;13:*.vob=38;5;13:*.qt=38;5;13:*.nuv=38;5;13:*.wmv=38;5;13:*.asf=38;5;13:*.rm=38;5;13:*.rmvb=38;5;13:*.flc=38;5;13:*.avi=38;5;13:*.fli=38;5;13:*.flv=38;5;13:*.gl=38;5;13:*.dl=38;5;13:*.xcf=38;5;13:*.xwd=38;5;13:*.yuv=38;5;13:*.cgm=38;5;13:*.emf=38;5;13:*.axv=38;5;13:*.anx=38;5;13:*.ogv=38;5;13:*.ogx=38;5;13:*.aac=38;5;45:*.au=38;5;45:*.flac=38;5;45:*.mid=38;5;45:*.midi=38;5;45:*.mka=38;5;45:*.mp3=38;5;45:*.mpc=38;5;45:*.ogg=38;5;45:*.ra=38;5;45:*.wav=38;5;45:*.axa=38;5;45:*.oga=38;5;45:*.spx=38;5;45:*.xspf=38;5;45:
+    MAIL=/var/spool/mail/skone
+    MANPATH=/opt/tools-hackathon/openmpi/acfl/share/man:/opt/tools-hackathon/arm/compilers/arm-linux-compiler-22.1_Generic-AArch64_RHEL-7_aarch64-linux/share/man:/opt/tools-hackathon/arm/compilers/gcc-11.2.0_Generic-AArch64_RHEL-7_aarch64-linux/share/man:/opt/arm/armpl/gcc/9.3.0/share/man:/opt/slurm/share/man
+    MODULEPATH=/opt/tools-hackathon/arm/compilers/modulefiles/acfl/../../moduledeps/acfl/22.1:/opt/tools-hackathon/openmpi/modulefiles:/opt/tools-hackathon/arm/forge/modulefiles:/opt/tools-hackathon/arm/compilers/modulefiles:/usr/share/Modules/modulefiles:/etc/modulefiles
+    MODULESHOME=/usr/share/Modules
+    OLDPWD=/userdir/home/skone
+    PATH=/opt/tools-hackathon/openmpi/acfl/bin:/opt/tools-hackathon/arm/compilers/arm-linux-compiler-22.1_Generic-AArch64_RHEL-7_aarch64-linux/bin:/opt/tools-hackathon/arm/compilers/gcc-11.2.0_Generic-AArch64_RHEL-7_aarch64-linux/binutils_bin:/opt/arm/armpl/gcc/9.3.0/bin:/opt/tools-hackathon/arm/forge/bin:/usr/lib64/qt-3.3/bin:/opt/amazon/openmpi/bin/:/opt/amazon/efa/bin/:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/bin:/opt/aws/bin:/opt/parallelcluster/pyenv/versions/3.7.10/envs/awsbatch_virtualenv/bin:/opt/parallelcluster/pyenv/versions/3.7.10/envs/cfn_bootstrap_virtualenv/bin:/opt/slurm/bin:/userdir/home/skone/.local/bin:/userdir/home/skone/bin
+    PKG_CONFIG_PATH=/opt/tools-hackathon/arm/compilers/armpl-22.1.0_AArch64_RHEL-7_arm-linux-compiler_aarch64-linux/pkgconfig
+    PWD=/userdir/home/skone/saturne-open-cases/BUNDLE/BENCH_C016_PREPROCESS/DATA
+    QTDIR=/usr/lib64/qt-3.3
+    QTINC=/usr/lib64/qt-3.3/include
+    QTLIB=/usr/lib64/qt-3.3/lib
+    SHELL=/bin/bash
+    SHLVL=3
+    SSH_CLIENT=46.193.1.123 32916 22
+    SSH_CONNECTION=46.193.1.123 32916 10.8.15.90 22
+    SSH_TTY=/dev/pts/5
+    TEMP=/userdir/home/skone/code_saturne-7.2.0
+    TERM=xterm-256color
+    USER=skone
+    XDG_DATA_DIRS=/userdir/home/skone/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share
+    XDG_RUNTIME_DIR=/run/user/835401184
+    XDG_SESSION_ID=1384
+    _=/userdir/home/skone/arm/bin/code_saturne
+    _LMFILES_=/opt/tools-hackathon/arm/forge/modulefiles/arm-forge/22.1:/opt/arm/armpl/21.0.0/modulefiles/armpl/gcc-9.3:/opt/arm/armpl/21.0.0/modulefiles/armpl/21.0.0_gcc-9.3:/usr/share/Modules/modulefiles/armpl/21.0.0:/opt/tools-hackathon/arm/compilers/modulefiles/binutils/11.2.0:/opt/tools-hackathon/arm/compilers/modulefiles/acfl/22.1:/opt/tools-hackathon/openmpi/modulefiles/openmpi/acfl/4.1.4:/opt/tools-hackathon/arm/compilers/modulefiles/acfl/../../moduledeps/acfl/22.1/armpl/22.1.0
+  ----------------------------------------------------
+  Case           : BENCH_C016_PREPROCESS
+    directory    : /userdir/home/skone/saturne-open-cases/BUNDLE/BENCH_C016_PREPROCESS
+    results dir. : /userdir/home/skone/saturne-open-cases/BUNDLE/BENCH_C016_PREPROCESS/RESU/extrude_16
+    solver       : /userdir/home/skone/code_saturne-7.2.0/libexec/code_saturne/cs_solver
+  ----------------------------------------------------
+========================================================
+Finish time      : Sunday December 04 18:39:14 CEST 2022
+========================================================

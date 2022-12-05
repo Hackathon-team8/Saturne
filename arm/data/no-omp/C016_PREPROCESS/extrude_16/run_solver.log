@@ -1,0 +1,252 @@
+command: 
+ /userdir/home/skone/code_saturne-7.2.0/libexec/code_saturne/cs_solver --preprocess
+
+***************************************************************
+
+                                  (R)
+                      Code_Saturne
+
+                      Version 7.2.0
+
+
+  Copyright (C) 1998-2022 EDF S.A., France
+
+  build dim. 04 déc. 2022 16:23:17 UTC
+
+  The Code_Saturne CFD tool  is free software;
+  you can redistribute it and/or modify it under the terms
+  of the GNU General Public License as published by the
+  Free Software Foundation; either version 2 of the License,
+  or (at your option) any later version.
+
+  The Code_Saturne CFD tool is distributed in the hope that
+  it will be useful, but WITHOUT ANY WARRANTY; without even
+  the implied warranty of MERCHANTABILITY or FITNESS FOR A
+  PARTICULAR PURPOSE.  See the GNU General Public License
+  for more details.
+
+***************************************************************
+
+
+Local case configuration:
+
+  Date:                dim. 04 déc. 2022 18:39:14 UTC
+  System:              Linux 5.10.149-133.644.amzn2.aarch64
+  Machine:             ip-10-8-15-90
+  Processor:           
+
+  Memory:              15679 MB
+  User:                skone (skone)
+  Directory:           /userdir/home/skone/saturne-open-cases/BUNDLE/BENCH_C016_PREPROCESS/RESU/extrude_16
+
+  Compilers used for build:
+    Fortran compiler:  GNU Fortran (GCC) 9.3.0
+
+  MPI version: 3.1 (Open MPI 4.1.4)
+
+  OpenMP version: none
+
+  I/O read method:     standard input and output, serial access
+  I/O write method:    standard input and output, serial access
+
+
+Postprocessing output writers:
+------------------------------
+
+  -1: name: results
+      directory: postprocessing
+      format: EnSight Gold
+      options: binary
+      time dependency: fixed mesh
+      output: at end
+
+  -5: name: 
+      directory: monitoring
+      format: time_plot
+      options: DAT
+      time dependency: fixed mesh
+      output: every time step
+
+  -6: name: 
+      directory: profiles
+      format: plot
+      options: 
+      time dependency: fixed mesh
+      output: at end
+
+  -7: name: histograms
+      directory: histograms
+      format: histogram
+      options: txt
+      time dependency: fixed mesh
+      output: at end
+
+
+ Reading file:        mesh_input.csm
+ Finished reading:    mesh_input.csm
+
+ Number of cells:                                      1024
+
+ ----------------------------------------------------------
+ Number of cells + halo cells:                         1024
+
+
+ ----------------------------------------------------------
+ Number of interior faces:                             1940
+
+ ----------------------------------------------------------
+ Number of boundary faces:                             2264
+
+ ----------------------------------------------------------
+
+ Histogram of the number of interior faces per cell:
+
+    minimum value =                  2
+    maximum value =                  4
+
+      1 : [          2 ;          3 [ =          8
+      2 : [          3 ;          4 ] =       1016
+
+ ----------------------------------------------------------
+
+ Extrusion: 1024 boundary faces selected.
+            16384 cells added.
+
+ Writing file:        mesh_output.csm
+ Finished writing:    mesh_output.csm
+
+ Renumbering mesh:
+
+   renumbering for cells:
+     pre-numbering:                       no renumbering
+     cells adjacent to ghost cells last:  no
+     numbering:                           no renumbering
+
+   renumbering for interior faces:
+     cell adjacency pre-ordering:         lowest id first
+     faces adjacent to ghost cells last:  no
+     numbering:                           adjacent cells
+
+   renumbering for boundary faces:
+     numbering:                           adjacent cells
+
+   renumbering for vertices:
+     numbering:                           no renumbering
+
+ Numbering for cells:
+
+ type: default
+  number of halo-adjacent elements:      17408
+
+ Numbering for interior faces:
+
+ type: default
+  number of halo-adjacent elements:      49364
+
+ Numbering for boundary faces:
+
+ type: default
+  number of halo-adjacent elements:       5720
+
+ ----------------------------------------------------------
+
+ Matrix bandwidth for volume mesh :          16369
+ Matrix profile/lines for volume mesh :      1994
+
+ Mesh coordinates:               minimum    and maximum
+                       X : -2.2500000e-02  2.2500000e-02
+                       Y : -2.2500000e-02  2.2500000e-02
+                       Z :  0.0000000e+00  2.5500000e-02
+ Mesh
+     Number of cells:          17408
+     Number of interior faces: 49364
+     Number of boundary faces: 5720
+     Number of vertices:       20376
+
+ Groups:
+    "east"
+       boundary faces:          374
+    "north"
+       boundary faces:          374
+    "south"
+       boundary faces:          374
+    "wall"
+       boundary faces:         2176
+    "west"
+       boundary faces:          374
+
+ --- Information on the volumes
+       Minimum control volume      =  3.8426901e-10
+       Maximum control volume      =  4.3267863e-09
+       Total volume for the domain =  3.2806229e-05
+
+  Criterion 1: Orthogonality:
+    Number of bad cells detected: 0 -->   0 %
+
+  Criterion 2: Offset:
+    Number of bad cells detected: 0 -->   0 %
+
+  Criterion 3: Least-Squares Gradient Quality:
+    Number of bad cells detected: 0 -->   0 %
+
+  Criterion 4: Cells Volume Ratio:
+    Number of bad cells detected: 0 -->   0 %
+
+  Criterion 5: Guilt by Association:
+    Number of bad cells detected: 0 -->   0 %
+
+ Computing geometric quantities (0.0141 s)
+
+ --- Information on volume zones
+  Volume zone "cells"
+    id              = 0
+    Number of cells = 17408
+    Volume          = 3.2806e-05
+    Center of gravity = (-4.2149e-18, -7.9617e-17, 0.01275)
+    Surface         = -1 (not computed)
+  Volume zone "all_cells"
+    id              = 1
+    Number of cells = 17408
+    Volume          = 3.2806e-05
+    Center of gravity = (-4.2149e-18, -7.9617e-17, 0.01275)
+    Surface         = -1 (not computed)
+
+ --- Information on boundary zones
+  Boundary zone "boundary_faces"
+    id              = 0
+    Number of faces = 5720
+    Surface         = 0.008425
+    Center of gravity = (-3.6806e-18, 6.004e-18, 0.01275)
+    Perimeter       = -1 (not computed)
+  Boundary zone "Inlet"
+    id              = 1
+    Number of faces = 374
+    Surface         = 0.00059415
+    Center of gravity = (-0.0225, 1.6985e-18, 0.01275)
+    Perimeter       = -1 (not computed)
+  Boundary zone "Outlet"
+    id              = 2
+    Number of faces = 374
+    Surface         = 0.00059415
+    Center of gravity = (0.0225, 1.2975e-18, 0.01275)
+    Perimeter       = -1 (not computed)
+  Boundary zone "Wall"
+    id              = 3
+    Number of faces = 2176
+    Surface         = 0.0034754
+    Center of gravity = (1.9413e-17, -1.4557e-18, 0.01275)
+    Perimeter       = -1 (not computed)
+  Boundary zone "Symmetry"
+    id              = 4
+    Number of faces = 2796
+    Surface         = 0.0037613
+    Center of gravity = (-6.448e-19, -3.5187e-18, 0.01275)
+    Perimeter       = -1 (not computed)
+
+ Checking the mesh structure coherency:
+    Checking the face -> cells connectivity coherency
+    Coherency criteria definition
+    Coherency verification on coordinates
+ End of coherency check of the mesh structure.
+
+ Destroying structures and ending computation

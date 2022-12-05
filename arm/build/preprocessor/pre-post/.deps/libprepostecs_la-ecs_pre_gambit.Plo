@@ -1,0 +1,170 @@
+libprepostecs_la-ecs_pre_gambit.lo: \
+  ../../../../code_saturne-7.2.0/preprocessor/pre-post/ecs_pre_gambit.c \
+  /usr/include/assert.h /usr/include/features.h \
+  /usr/include/stdc-predef.h /usr/include/sys/cdefs.h \
+  /usr/include/bits/wordsize.h /usr/include/bits/long-double.h \
+  /usr/include/gnu/stubs.h /usr/include/gnu/stubs-lp64.h \
+  /usr/include/errno.h /usr/include/bits/errno.h \
+  /usr/include/linux/errno.h /usr/include/asm/errno.h \
+  /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+  /usr/include/stdlib.h /usr/include/bits/libc-header-start.h \
+  /opt/tools-hackathon/arm/compilers/arm-linux-compiler-22.1_Generic-AArch64_RHEL-7_aarch64-linux/lib/clang/13.0.1/include/stddef.h \
+  /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h \
+  /usr/include/bits/floatn.h /usr/include/bits/stdlib-bsearch.h \
+  /usr/include/bits/stdlib-float.h /usr/include/string.h \
+  /usr/include/bits/types/locale_t.h \
+  /usr/include/bits/types/__locale_t.h \
+  ../../../../code_saturne-7.2.0/preprocessor/util/ecs_def.h \
+  ../../cs_config.h \
+  /opt/tools-hackathon/arm/compilers/arm-linux-compiler-22.1_Generic-AArch64_RHEL-7_aarch64-linux/lib/clang/13.0.1/include/__stddef_max_align_t.h \
+  /opt/tools-hackathon/arm/compilers/arm-linux-compiler-22.1_Generic-AArch64_RHEL-7_aarch64-linux/lib/clang/13.0.1/include/stdint.h \
+  /usr/include/stdint.h /usr/include/bits/types.h \
+  /usr/include/bits/typesizes.h /usr/include/bits/wchar.h \
+  /usr/include/bits/stdint-intn.h /usr/include/bits/stdint-uintn.h \
+  /opt/tools-hackathon/arm/compilers/arm-linux-compiler-22.1_Generic-AArch64_RHEL-7_aarch64-linux/lib/clang/13.0.1/include/stdbool.h \
+  ../../../../code_saturne-7.2.0/preprocessor/util/ecs_elt_typ_liste.h \
+  ../../../../code_saturne-7.2.0/preprocessor/util/ecs_file.h \
+  ../../../../code_saturne-7.2.0/preprocessor/util/ecs_mem.h \
+  ../../../../code_saturne-7.2.0/preprocessor/util/ecs_tab.h \
+  ../../../../code_saturne-7.2.0/preprocessor/base/ecs_descr.h \
+  /usr/include/stdio.h /usr/include/bits/types/__FILE.h \
+  /usr/include/bits/types/FILE.h /usr/include/libio.h \
+  /usr/include/_G_config.h /usr/include/bits/types/__mbstate_t.h \
+  /opt/tools-hackathon/arm/compilers/arm-linux-compiler-22.1_Generic-AArch64_RHEL-7_aarch64-linux/lib/clang/13.0.1/include/stdarg.h \
+  /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
+  /usr/include/bits/stdio.h \
+  ../../../../code_saturne-7.2.0/preprocessor/base/ecs_table.h \
+  ../../../../code_saturne-7.2.0/preprocessor/base/ecs_table_att.h \
+  ../../../../code_saturne-7.2.0/preprocessor/base/ecs_famille.h \
+  ../../../../code_saturne-7.2.0/preprocessor/base/ecs_maillage.h \
+  ../../../../code_saturne-7.2.0/preprocessor/pre-post/ecs_post.h \
+  ../../../../code_saturne-7.2.0/preprocessor/pre-post/ecs_post_ens.h \
+  ../../../../code_saturne-7.2.0/preprocessor/pre-post/ecs_med.h \
+  ../../../../code_saturne-7.2.0/preprocessor/pre-post/ecs_post_cgns.h \
+  ../../../../code_saturne-7.2.0/preprocessor/base/ecs_maillage_priv.h \
+  ../../../../code_saturne-7.2.0/preprocessor/pre-post/ecs_maillage_pre.h \
+  ../../../../code_saturne-7.2.0/preprocessor/pre-post/ecs_pre_gambit.h
+
+/usr/include/assert.h:
+
+/usr/include/features.h:
+
+/usr/include/stdc-predef.h:
+
+/usr/include/sys/cdefs.h:
+
+/usr/include/bits/wordsize.h:
+
+/usr/include/bits/long-double.h:
+
+/usr/include/gnu/stubs.h:
+
+/usr/include/gnu/stubs-lp64.h:
+
+/usr/include/errno.h:
+
+/usr/include/bits/errno.h:
+
+/usr/include/linux/errno.h:
+
+/usr/include/asm/errno.h:
+
+/usr/include/asm-generic/errno.h:
+
+/usr/include/asm-generic/errno-base.h:
+
+/usr/include/stdlib.h:
+
+/usr/include/bits/libc-header-start.h:
+
+/opt/tools-hackathon/arm/compilers/arm-linux-compiler-22.1_Generic-AArch64_RHEL-7_aarch64-linux/lib/clang/13.0.1/include/stddef.h:
+
+/usr/include/bits/waitflags.h:
+
+/usr/include/bits/waitstatus.h:
+
+/usr/include/bits/floatn.h:
+
+/usr/include/bits/stdlib-bsearch.h:
+
+/usr/include/bits/stdlib-float.h:
+
+/usr/include/string.h:
+
+/usr/include/bits/types/locale_t.h:
+
+/usr/include/bits/types/__locale_t.h:
+
+../../../../code_saturne-7.2.0/preprocessor/util/ecs_def.h:
+
+../../cs_config.h:
+
+/opt/tools-hackathon/arm/compilers/arm-linux-compiler-22.1_Generic-AArch64_RHEL-7_aarch64-linux/lib/clang/13.0.1/include/__stddef_max_align_t.h:
+
+/opt/tools-hackathon/arm/compilers/arm-linux-compiler-22.1_Generic-AArch64_RHEL-7_aarch64-linux/lib/clang/13.0.1/include/stdint.h:
+
+/usr/include/stdint.h:
+
+/usr/include/bits/types.h:
+
+/usr/include/bits/typesizes.h:
+
+/usr/include/bits/wchar.h:
+
+/usr/include/bits/stdint-intn.h:
+
+/usr/include/bits/stdint-uintn.h:
+
+/opt/tools-hackathon/arm/compilers/arm-linux-compiler-22.1_Generic-AArch64_RHEL-7_aarch64-linux/lib/clang/13.0.1/include/stdbool.h:
+
+../../../../code_saturne-7.2.0/preprocessor/util/ecs_elt_typ_liste.h:
+
+../../../../code_saturne-7.2.0/preprocessor/util/ecs_file.h:
+
+../../../../code_saturne-7.2.0/preprocessor/util/ecs_mem.h:
+
+../../../../code_saturne-7.2.0/preprocessor/util/ecs_tab.h:
+
+../../../../code_saturne-7.2.0/preprocessor/base/ecs_descr.h:
+
+/usr/include/stdio.h:
+
+/usr/include/bits/types/__FILE.h:
+
+/usr/include/bits/types/FILE.h:
+
+/usr/include/libio.h:
+
+/usr/include/_G_config.h:
+
+/usr/include/bits/types/__mbstate_t.h:
+
+/opt/tools-hackathon/arm/compilers/arm-linux-compiler-22.1_Generic-AArch64_RHEL-7_aarch64-linux/lib/clang/13.0.1/include/stdarg.h:
+
+/usr/include/bits/stdio_lim.h:
+
+/usr/include/bits/sys_errlist.h:
+
+/usr/include/bits/stdio.h:
+
+../../../../code_saturne-7.2.0/preprocessor/base/ecs_table.h:
+
+../../../../code_saturne-7.2.0/preprocessor/base/ecs_table_att.h:
+
+../../../../code_saturne-7.2.0/preprocessor/base/ecs_famille.h:
+
+../../../../code_saturne-7.2.0/preprocessor/base/ecs_maillage.h:
+
+../../../../code_saturne-7.2.0/preprocessor/pre-post/ecs_post.h:
+
+../../../../code_saturne-7.2.0/preprocessor/pre-post/ecs_post_ens.h:
+
+../../../../code_saturne-7.2.0/preprocessor/pre-post/ecs_med.h:
+
+../../../../code_saturne-7.2.0/preprocessor/pre-post/ecs_post_cgns.h:
+
+../../../../code_saturne-7.2.0/preprocessor/base/ecs_maillage_priv.h:
+
+../../../../code_saturne-7.2.0/preprocessor/pre-post/ecs_maillage_pre.h:
+
+../../../../code_saturne-7.2.0/preprocessor/pre-post/ecs_pre_gambit.h:

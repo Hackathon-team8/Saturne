@@ -369,35 +369,6 @@ elif test "x$cs_gcc" = "xclang"; then
 
 fi
 
-# Otherwise, are we using the Arm compiler ?
-#-------------------------------------------
-
-if test "x$cs_cc_compiler_known" != "xyes" ; then
-
-  $CC -v 2>&1 | grep 'Arm C/C++/Fortran' > /dev/null
-  if test "$?" = "0" ; then
-
-    echo "compiler '$CC' is Arm C compiler"
-
-    # Version strings for logging purposes and known compiler flag
-    cs_ac_cc_version=`$CC -v 2>&1 | grep "Arm C/C++/Fortran" | head -1`
-    cs_cc_compiler_known=yes
-
-    # Default compiler flags
-    cflags_default="-std=c11 -fPIC"
-    cflags_default_opt="-O2"
-    cflags_default_hot="-O3"
-    cflags_default_dbg="-g"
-    cflags_default_omp="-fopenmp"
-
-    # Default  linker flags
-    ldflags_default=""
-    ldflags_default_opt="-O2"
-    ldflags_default_dbg="-g"
-
-  fi
-fi
-
 # Otherwise, are we using nvc/pgcc ?
 #---------------------------------
 
@@ -420,7 +391,7 @@ if test "x$cs_cc_compiler_known" != "xyes" ; then
     cs_cc_compiler_known=yes
 
     # Default compiler flags
-    cflags_default="-fPIC"
+    cflags_default=""
     cflags_default_dbg="-g -Mbounds"
     cflags_default_opt="-O2"
     cflags_default_hot="-fast"
@@ -513,6 +484,36 @@ if test "x$cs_cc_compiler_known" != "xyes" ; then
     cflags_default_hot="-O3"
     cflags_default_dbg="-g"
     cflags_default_omp="-Kopenmp"
+
+    # Default  linker flags
+    ldflags_default=""
+    ldflags_default_opt="-O2"
+    ldflags_default_dbg="-g"
+
+  fi
+fi
+
+# Otherwise, are we using the Arm compiler ?
+#-------------------------------------------
+
+if test "x$cs_cc_compiler_known" != "xyes" ; then
+
+  $CC -v 2>&1 | grep 'Arm C/C++/Fortran' > /dev/null
+  if test "$?" = "0" ; then
+
+    echo "compiler '$CC' is Arm C compiler"
+
+    # Version strings for logging purposes and known compiler flag
+    cs_ac_cc_version=`$CC -v 2>&1 | grep "Arm C/C++/Fortran" | head -1`
+    cs_cc_compiler_known=yes
+    cs_linker_set=yes
+
+    # Default compiler flags
+    cflags_default="-std=c11 -fPIC"
+    cflags_default_opt="-O2"
+    cflags_default_hot="-O3"
+    cflags_default_dbg="-g"
+    cflags_default_omp="-fopenmp"
 
     # Default  linker flags
     ldflags_default=""
@@ -796,36 +797,17 @@ elif test "x$cs_gxx" = "xclang"; then
   cxxflags_default_omp="-fopenmp=libomp"
   cxxflags_default_std="-funsigned-char"
 
-# Otherwise, are we using the Arm compiler ?
-#------------------------------------------
-elif test "x$cs_cxx_compiler_known" != "xyes"; then
-
-  $CXX -v 2>&1 | grep 'Arm C/C++/Fortran' > /dev/null
-  if test "$?" = "0" ; then
-
-    echo "compiler '$CXX' is Arm C++"
-
-    # Version strings for logging purposes and known compiler flag
-    cs_ac_cxx_version=`$CXX -v 2>&1 | grep "Arm C/C++/Fortran" | head -1`
-    cs_cxx_compiler_known=yes
-
-    # Default compiler flags
-    cxxflags_default="-std=c++11 -fPIC"
-    cxxflags_default_opt="-O2"
-    cxxflags_default_hot="-O3"
-    cxxflags_default_dbg="-g"
-    cfxxlags_default_omp="-fopenmp"
-    cxxflags_default_std=""
-  fi
-fi
 # Otherwise, are we using pgc++/nvc++ ?
 #--------------------------------------
-if test "x$cs_cxx_compiler_known" != "xyes"; then
-    $CXX -V 2>&1 | grep 'NVIDIA' > /dev/null
+
+else
+
+  $CXX -V 2>&1 | grep 'NVIDIA' > /dev/null
   if test "$?" = "0" ; then
     $CXX -V 2>&1 | grep 'Compilers and Tools' > /dev/null
   fi
   if test "$?" = "0" ; then
+
     echo "compiler '$CXX' is NVIDIA compiler"
 
     # Version strings for logging purposes and known compiler flag
@@ -837,7 +819,7 @@ if test "x$cs_cxx_compiler_known" != "xyes"; then
     cs_cxx_compiler_known=yes
 
     # Default compiler flags
-    cxxflags_default="-fPIC"
+    cxxflags_default=""
     cxxflags_default_dbg="-g -Mbounds"
     cxxflags_default_opt="-O2"
     cxxflags_default_hot="-fast"
@@ -845,8 +827,8 @@ if test "x$cs_cxx_compiler_known" != "xyes"; then
     cxxflags_default_std=""
 
   fi
-fi
 
+fi
 
 # Otherwise, are we using xlc++ ?
 #--------------------------------
@@ -924,6 +906,30 @@ if test "x$cs_cxx_compiler_known" != "xyes" ; then
   fi
 fi
 
+# Otherwise, are we using the Arm compiler ?
+#------------------------------------------
+
+if test "x$cs_cxx_compiler_known" != "xyes" ; then
+
+  $CXX -v 2>&1 | grep 'Arm C/C++/Fortran' > /dev/null
+  if test "$?" = "0" ; then
+
+    echo "compiler '$CXX' is Arm C++"
+
+    # Version strings for logging purposes and known compiler flag
+    cs_ac_cxx_version=`$CXX -v 2>&1 | grep "Arm C/C++/Fortran" | head -1`
+    cs_cxx_compiler_known=yes
+
+    # Default compiler flags
+    cxxflags_default="-std=c++11 -fPIC"
+    cxxflags_default_opt="-O2"
+    cxxflags_default_hot="-O3"
+    cxxflags_default_dbg="-g"
+    cfxxlags_default_omp="-fopenmp"
+    cxxflags_default_std=""
+  fi
+fi
+
 # Compiler still not identified
 #------------------------------
 
@@ -973,7 +979,7 @@ fcflags_default_prf="-g"
 
 cs_gfortran=no
 
-cs_ac_fc_version=`$FC $user_FCFLAGS --version 1>&1 | head -1`
+cs_ac_fc_version=`$FC $user_FCFLAGS --version 2>&1 | head -1`
 
 # Are we using gfortran ?
 #------------------------
@@ -981,6 +987,7 @@ cs_ac_fc_version=`$FC $user_FCFLAGS --version 1>&1 | head -1`
 echo $cs_ac_fc_version | grep 'GNU Fortran' > /dev/null
 
 if test "$?" = "0" ; then
+
   cs_fc_version=`echo $FC --version  |sed 's/[a-zA-Z()]//g'`
   cs_fc_version="`$FC -v 2>&1 |grep 'gcc version' |\
                   sed 's/.*gcc version \([-a-z0-9\.]*\).*/\1/'`"
@@ -1115,39 +1122,14 @@ fi
 
 if test "x$cs_fc_compiler_known" != "xyes" ; then
 
-  # Are we using the Arm compiler ?
-  #--------------------------------
-
-  $FC -v 2>&1 | grep 'Arm C/C++/Fortran' > /dev/null
-
-  if test "$?" = "0" ; then
-
-    echo "compiler '$FC' is Arm Fortran compiler"
-
-    # Version strings for logging purposes and known compiler flag
-    cs_ac_fc_version=`$FC -v 2>&1 | grep "Arm C/C++/Fortran" | head -1`
-    cs_fc_compiler_known=yes
-
-    fcflags_default="-cpp -fPIC"
-    fcflags_default_dbg="-g"
-    fcflags_default_opt="-O2"
-    fcflags_default_omp="-fopenmp"
-
-  fi
-fi
-
-
-
-if test "x$cs_fc_compiler_known" != "xyes" ; then
-
   cs_ac_fc_version=""
 
   # Are we using pgfortran/nvfortran ?
   #-----------------------------------
 
   $FC -V 2>&1 | grep 'NVIDIA' > /dev/null
-  if test "$?" = "0" ; then	
-	$FC -V 2>&1 | grep 'Compilers and Tools' > /dev/null
+  if test "$?" = "0" ; then
+    $FC -V 2>&1 | grep 'Compilers and Tools' > /dev/null
   fi
   if test "$?" = "0" ; then
 
@@ -1162,7 +1144,7 @@ if test "x$cs_fc_compiler_known" != "xyes" ; then
     cs_fc_compiler_known=yes
 
     # Default compiler flags
-    fcflags_default="-Mpreprocess -noswitcherror -fPIC"
+    fcflags_default="-Mpreprocess -noswitcherror"
     fcflags_default_dbg="-g -Mbounds"
     fcflags_default_opt="-O2"
     fcflags_default_hot="-fast"
@@ -1238,6 +1220,29 @@ if test "x$cs_fc_compiler_known" != "xyes" ; then
     fcflags_default_dbg="-g"
     fcflags_default_opt="-O2"
     fcflags_default_omp="-Kopenmp"
+
+  fi
+fi
+
+if test "x$cs_fc_compiler_known" != "xyes" ; then
+
+  # Are we using the Arm compiler ?
+  #--------------------------------
+
+  $FC -v 2>&1 | grep 'Arm C/C++/Fortran' > /dev/null
+
+  if test "$?" = "0" ; then
+
+    echo "compiler '$FC' is Arm Fortran compiler"
+
+    # Version strings for logging purposes and known compiler flag
+    cs_ac_fc_version=`$FC -v 2>&1 | grep "Arm C/C++/Fortran" | head -1`
+    cs_fc_compiler_known=yes
+
+    fcflags_default="-cpp -fPIC"
+    fcflags_default_dbg="-g"
+    fcflags_default_opt="-O2"
+    fcflags_default_omp="-fopenmp"
 
   fi
 fi

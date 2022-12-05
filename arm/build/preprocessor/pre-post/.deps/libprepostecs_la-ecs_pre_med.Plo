@@ -1,0 +1,5 @@
+libprepostecs_la-ecs_pre_med.lo: \
+  ../../../../code_saturne-7.2.0/preprocessor/pre-post/ecs_pre_med.c \
+  ../../cs_config.h
+
+../../cs_config.h:
